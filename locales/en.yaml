@@ -1,0 +1,12 @@
+# restrictmail
+邮箱白名单管理: Email Whitelist Management
+邮箱域名: Email Domain
+添加: Add
+域名: Domain
+添加时间: Added Time
+操作: Operation
+删除: Delete
+尚未添加任何白名单域名: No whitelist domains added yet
+邮箱不能为空: Email cannot be empty
+该邮箱域名不在白名单中，无法注册: This email domain is not in the whitelist, registration is not allowed
+无效的域名格式: Invalid domain format 

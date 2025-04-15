@@ -1,0 +1,63 @@
+{% extends "layout/basic.html" %}
+{% block content %}
+<div class="row">
+  <div class="medium-12 columns">
+    <div class="section">
+      <div class="section__header">
+        <h1 class="section__title">{{ _('邮箱白名单管理') }}</h1>
+      </div>
+      <div class="section__body">
+        <form method="post">
+          <div class="row">
+            <div class="medium-9 columns">
+              <label>
+                {{ _('邮箱域名') }}
+                <input type="text" name="domain" placeholder="example.com" class="textbox">
+              </label>
+            </div>
+            <div class="medium-3 columns">
+              <label>&nbsp;</label>
+              <input type="hidden" name="operation" value="add">
+              <button type="submit" class="rounded primary button">{{ _('添加') }}</button>
+            </div>
+          </div>
+        </form>
+        <hr>
+        {% if domains.length %}
+        <table class="data-table">
+          <colgroup>
+            <col class="col--domain">
+            <col class="col--date">
+            <col class="col--operation">
+          </colgroup>
+          <thead>
+            <tr>
+              <th>{{ _('域名') }}</th>
+              <th>{{ _('添加时间') }}</th>
+              <th>{{ _('操作') }}</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for domain in domains %}
+            <tr>
+              <td>{{ domain._id }}</td>
+              <td>{{ domain.create_at_str }}</td>
+              <td>
+                <form method="post">
+                  <input type="hidden" name="operation" value="delete">
+                  <input type="hidden" name="domain" value="{{ domain._id }}">
+                  <button type="submit" class="rounded button">{{ _('删除') }}</button>
+                </form>
+              </td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+        {% else %}
+        <div class="empty-hint">{{ _('尚未添加任何白名单域名') }}</div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %} 
