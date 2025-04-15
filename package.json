@@ -1,6 +1,6 @@
 {
   "name": "restrictmail",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "description": "限制白名单邮箱注册的Hydro插件",
   "main": "index.ts",
   "author": "Your Name",

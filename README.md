@@ -11,9 +11,9 @@
 ## 安装
 
 ```bash
-yarn add @hydrooj/restrictmail
+yarn add @gshgsh/restrictmail
 # 或
-hydrooj addon add /path/to/restrictmail
+hydrooj addon add @gshgsh/restrictmail
 ```
 
 ## 使用方法
