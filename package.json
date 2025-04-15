@@ -1,13 +1,16 @@
 {
-  "name": "restrictmail",
-  "version": "0.5.0",
+  "name": "@gshgsh/restrictmail",
+  "version": "0.6.0",
   "description": "限制白名单邮箱注册的Hydro插件",
   "main": "index.ts",
-  "author": "Your Name",
+  "author": "Shenghan ",
   "license": "MIT",
   "packageManager": "yarn@1.22.22",
   "devDependencies": {
     "hydrooj": "^4.0.0"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "publishConfig": {
+    "access": "public"
+  }
 }
