@@ -14,6 +14,7 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
           # Defaults to the user or organization that owns the workflow file
           scope: '@gshgsh'
+      - run: corepack enable
       - run: yarn
       - run: yarn npm publish // for Yarn version 1, use `yarn publish` instead
         env:
